@@ -1,30 +1,66 @@
-# Frontend
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# ProjetoIntegrador
+# :artificial_satellite: Sobre o Projeto Integrador
 Projeto final do bootcamp oferecido pela Porto Seguro em parceria com a Digital House Brasil
+
+:construction::warning: Em desenvolvimento 
+
+## :books: Introdução
+Com o mundo cada vez mais tecnológico, podemos utilizar de diversas alternativas para ter acesso a um livro, uma delas é de forma online, mas por outro lado, muitas pessoas não abrem mão de ter seu livro físico.
+
+Pensando no consumo consciente e na diversidade cultural aplicada no mundo do livro e das editoras, vamos conectar amantes por livros de todo o país. 
+
+Quanto mais livros seminovos e usados forem reutilizados, conseguimos possibilitar o maior acesso à cultura por um valor acessível.
+
+## :jigsaw: Problema
+O problema que esperamos resolver é diminuir o consumo de matéria-prima destinada a produção de novos livros, e por consequência, diminuir o impacto ambiental.
+
+## :dart: Objetivo
+
+Criar uma plataforma intuitiva que possibilite a compra de livros seminovos ou usados.
+
+## :loudspeaker: Justificativa
+
+Nos baseamos na ODS 12 – Consumo e Produção:
+
+12.7 – Promover práticas de compras pública sustentáveis, de acordo com as políticas e prioridades nacionais.
+
+Diante disso, percebemos a necessidade em desenvolver uma plataforma com intuito de expandir o reuso e consumo consciente dos livro
+
+## 🛠 Tecnologias
+
+As seguintes linguagens de programação foram usadas:
+
+### **Front-end**
+
+<br>
+<p align="left">
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="100" height="100"/>
+  </a>
+   <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="Css3" width="100" height="100"/>
+  </a>
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="Javascript" width="100" height="100"/>
+  </a>
+  <a href="https://angular.io/docs" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg" alt="AngularJS" width="100" height="100"/>
+  </a>
+  <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap 4" width="100" height="100"/>
+  </a>
+
+
+# :framed_picture: Projeto de Interface
+
+Dentre as preocupações para a montagem da interface do sistema, estabelecemos um foco em questões como simplificar a vida dos leitores, e por isso, criamos uma plataforma dinâmica, interativa e acessível e para diversos usuários. Desta forma, o projeto tem uma identidade visual padronizada em todas as telas que são projetadas para funcionamento em desktops e dispositivos móveis.
+
+## Desenvolvido com :blue_heart: por:
+
+* <a href="https://www.linkedin.com/in/alinetiburcio/" target="_blank">Aline Gabriela Tibúrcio</a>
+* <a href="https://www.linkedin.com/in/anamenici/" target="_blank">Ana Menici</a>
+* <a href="https://www.linkedin.com/in/aneska/" target="_blank">Aneska Karina</a>
+* <a href="https://www.linkedin.com/in/karlinhos987/" target="_blank">Carlos R. Oliveira Junior</a>
+* <a href="https://www.linkedin.com/in/joaow-victor/" target="_blank">João Victor</a>
+* <a href="https://www.linkedin.com/in/rejane-ssantos/" target="_blank">Rejane Santos</a>
+* <a href="https://www.linkedin.com/in/wesley-zanelatto-53862628/" target="_blank">Wesley Zanelatto</a>
+
