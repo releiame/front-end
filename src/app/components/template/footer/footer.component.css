@@ -109,7 +109,7 @@ ul li {
     height: 90px;
   }
 
-  .tam-h5 {
+  h5 {
     font-size: medium;
   }
 
@@ -136,25 +136,30 @@ ul li {
 @media (max-width: 420px) {
   .tam-pagmto {
     width: auto;
-    height: 30px;
+    height: 25px;
   }
 
   .tam-ssl {
     width: auto;
-    height: 50px;
+    height: 40px;
   }
 
-  .tam-h5 {
-    font-size: medium;
+  h5 {
+    font-size: 15px;
   }
 
   .tam-p {
-    font-size: small;
+    font-size: 12px;
   }
 
   .tam-rele {
     width: auto;
     height: 30px;
+  }
+
+  .tam-grupo6 {
+    width: auto;
+    height: 16px;
   }
 
   .none {
@@ -170,4 +175,51 @@ ul li {
     width: auto;
     height: 40px;
   }
+  
 }
+
+@media (max-width: 400px) {
+  .tam-pagmto {
+    width: auto;
+    height: 25px;
+  }
+
+  .tam-ssl {
+    width: auto;
+    height: 40px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  .tam-p {
+    font-size: 12px;
+  }
+
+  .tam-rele {
+    width: auto;
+    height: 30px;
+  }
+
+  .tam-grupo6 {
+    width: auto;
+    height: 16px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .tam-icon {
+    width: auto;
+    height: 25px;
+  }
+
+  .tam-i {
+    width: auto;
+    height: 35px;
+  }
+  
+}
+

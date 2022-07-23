@@ -37,7 +37,20 @@
         justify-content: flex-start;
     }
 
+}
 
+@media (max-width: 400px)
+{
+    .tam-p {
+        font-size: small;
+    }
+    .tam-logo {
+        width: auto;
+        height: 35px;
+    }
+    .wid {
+        width: 22vh;
+    }
 }
 
 
