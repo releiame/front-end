@@ -35,3 +35,58 @@ a {
     width: 39rem;
     background-color: beige;
 }
+
+@media (max-width: 420px) {
+    .font-titulo {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size:larger
+    }
+
+    .text-light {
+        font-size: small;
+    }
+
+    button {
+        font-size: small;
+    }
+    label {
+        font-size: medium;
+    }
+    .tam-th {
+        font-size: small;
+    }
+    .tam-p {
+        font-size: small;
+    }
+
+}
+
+@media (max-width: 377px) {
+    .font-titulo {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size:larger
+    }
+
+    .text-light {
+        font-size: small;
+    }
+
+    button {
+        font-size: small;
+    }
+    label {
+        font-size: medium;
+    }
+    .tam-th {
+        font-size: small;
+    }
+    .tam-p {
+        font-size: small;
+    }
+}

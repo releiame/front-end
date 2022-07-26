@@ -70,7 +70,7 @@ a {text-decoration: none;}
 
 @media (max-width: 420px) {
     .wid {
-        width: 26vh;
+        width: 24vh;
     }
 
     .tam-logo {
@@ -121,4 +121,11 @@ a {text-decoration: none;}
     .tam-row {
         justify-content: flex-start;
     }
+
+}
+@media (max-width: 378px) {
+    .wid {
+        width: 132px;
+    }
+
 }

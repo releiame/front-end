@@ -5,7 +5,7 @@
             <ul class="nav-link text-center opacity-25 " aria-current="page" href="#">
                 <a routerLink="/carrinho">
                     <li><img src="../../../../assets/img/carrinho_preto.png" /></li>
-                    <li class="text-dark">Carrinho</li>
+                    <li class="font-titulo text-dark">Carrinho</li>
                 </a>
             </ul>
         </div>
@@ -13,14 +13,14 @@
             <ul class="nav-link text-dark">
                 <a routerLink="/cad-endereco">
                     <li><img src="../../../../assets/img/caminhao-bau.png" /></li>
-                    <li class="text-dark">Entrega</li>
+                    <li class="font-titulo text-dark">Entrega</li>
                 </a>
             </ul>
         </div>
         <div class="nav-item text-center carrinho">
             <ul class="nav-link text-dark">
                 <li><img src="../../../../assets/img/conta.png" /></li>
-                <li>Finalização</li>
+                <li class="font-titulo">Finalização</li>
             </ul>
         </div>
     </div>
@@ -28,38 +28,38 @@
     <div class="row g-3 mt-3 d-flex justify-content-around">
     <div class="col-md-5">
         <label for="pagamento" class="form-label">Selecione a forma de pagamento:</label>
-        <select id="pagamento" name="pagamento" class="form-control" (change)='tipoPagamento($event)'>
-            <option>Escolha uma opção de pagamento</option>
-            <option value="Boleto">Boleto</option>
-            <option value="Cartão de Crédito">Cartão de Crédito</option>
-            <option value="Cartão de Débito">Cartão de Débito</option>
+        <select id="pagamento" name="pagamento" class="tam-p form-control" (change)='tipoPagamento($event)'>
+            <option class="tam-p">Escolha uma opção de pagamento</option>
+            <option class="tam-p" value="Boleto">Boleto</option>
+            <option class="tam-p" value="Cartão de Crédito">Cartão de Crédito</option>
+            <option class="tam-p" value="Cartão de Débito">Cartão de Débito</option>
         </select>
         <div class="mt-3">
         <ng-container *ngIf="pagamento == 'Cartão de Crédito'">
             <label for="dividir" class="form-label">Quantas vezes deseja dividir?</label>
-            <select id="dividir" class="form-select" (change)='dividido($event)'>
-                <option value="em 1x">1x de {{soma | currency:  'BRL'}} sem juros</option>
-                <option value="em 2x">2x de {{soma/2 | currency:  'BRL'}} sem juros</option>
-                <option value="em 3x">3x de {{soma/3 | currency:  'BRL'}} sem juros</option>
-                <option value="em 4x">4x de {{soma/4 | currency:  'BRL'}} sem juros</option>
-                <option value="em 5x">5x de {{soma/5 | currency:  'BRL'}} sem juros</option>
+            <select id="dividir" class="form-select tam-p" (change)='dividido($event)'>
+                <option class="tam-p" value="em 1x">1x de {{soma | currency:  'BRL'}} sem juros</option>
+                <option class="tam-p" value="em 2x">2x de {{soma/2 | currency:  'BRL'}} sem juros</option>
+                <option class="tam-p" value="em 3x">3x de {{soma/3 | currency:  'BRL'}} sem juros</option>
+                <option class="tam-p" value="em 4x">4x de {{soma/4 | currency:  'BRL'}} sem juros</option>
+                <option class="tam-p" value="em 5x">5x de {{soma/5 | currency:  'BRL'}} sem juros</option>
             </select>
         </ng-container>
         </div>
         <div class="card mt-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">CEP: {{endereco.cep}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{{endereco.rua}}, {{endereco.numero}}</h6>
-              <p class="card-text">{{endereco.complemento}}, {{endereco.bairro}}</p>
-              <p class="card-text">{{endereco.cidade}} - SP - {{endereco.cep}}</p>
-              <a routerLink="/cad-endereco" class="btn btn-secondary">Mudar</a>
+              <p class="tam-p card-title"><strong>CEP: {{endereco.cep}}</strong></p>
+              <p class="tam-p card-subtitle mb-2">{{endereco.rua}}, {{endereco.numero}}</p>
+              <p class="card-text tam-p">{{endereco.complemento}}, {{endereco.bairro}}</p>
+              <p class="card-text tam-p">{{endereco.cidade}} - SP </p>
+              <button routerLink="/cad-endereco" class="btn btn-secondary">Mudar</button>
             </div>
           </div>
     </div>
     <div class="col-md-5">
         <table class="table table-striped">
             <thead>
-              <tr class="text-muted font-weight-light">
+              <tr class="text-muted tam-th font-weight-light">
                 <th scope="col">N° do Livro</th>
                 <th scope="col">Capa</th>
                 <th scope="col">Titulo</th>
@@ -68,19 +68,19 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of listaLivros">
-                <th scope="row">{{item.isbn}}</th>
+                <th class="tam-p" scope="row">{{item.isbn}}</th>
                 <td><img class="img-thumbnail tam me-4" src={{item.capa}} /></td>
-                <td>{{item.titulo}}</td>
-                <td>{{item.valorUnitario | currency: 'BRL'}}</td>
+                <td class="tam-p">{{item.titulo}}</td>
+                <td class="tam-p">{{item.valorUnitario | currency: 'BRL'}}</td>
               </tr>
               <tr>
-                <td colspan="4">Valor total: <strong>{{soma | currency: 'BRL'}}</strong></td>
+                <td class="tam-p" colspan="4">Valor total: <strong>{{soma | currency: 'BRL'}}</strong></td>
               </tr>
             </tbody>
           </table>
     </div>
-    <div class="d-flex justify-content-end">
-        <button class="btn btn-success btn-lg" (click)="criarPedido()">Finalizar Pedido</button> <!--(click)="criarPedido()"-->
+    <div class="pb-2 d-flex justify-content-end">
+        <button class="btn btn-success btn-lg" (click)="criarPedido()">Finalizar Pedido</button> 
     </div>
 </div>
 </div>

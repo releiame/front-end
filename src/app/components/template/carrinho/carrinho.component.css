@@ -39,3 +39,52 @@ a {
     width: 39rem;
     background-color: beige;
 }
+
+@media (max-width: 420px) {
+    .font-titulo {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size:larger
+    }
+
+    .text-light {
+        font-size: small;
+    }
+
+    button {
+        font-size: small;
+    }
+    .m-1 {
+        width: 120px;
+    }
+    .tam-valor {
+        font-size: small;
+    }
+    .tam-nome {
+        font-size:small;
+    }
+}
+
+
+@media (max-width: 377px) {
+    .font-titulo {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size:larger
+    }
+
+    .text-light {
+        font-size: small;
+    }
+
+    button {
+        font-size: small;
+    }
+    .m-1 {
+        width: 120px;
+    }
+}

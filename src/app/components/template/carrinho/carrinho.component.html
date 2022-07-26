@@ -5,20 +5,20 @@
             <ul class="nav-link text-center carrinho" aria-current="page" href="#">
                 <a routerLink="#">
                     <li><img src="../../../../assets/img/carrinho_preto.png" /></li>
-                    <li class="text-dark">Carrinho</li>
+                    <li class="font-titulo text-dark">Carrinho</li>
                 </a>
             </ul>
         </div>
         <div class="nav-item opacity-25 text-center">
             <ul class="nav-link text-dark">
                 <li><img src="../../../../assets/img/caminhao-bau.png" /></li>
-                <li>Entrega</li>
+                <li class="font-titulo">Entrega</li>
             </ul>
         </div>
         <div class="nav-item opacity-25 text-center">
             <ul class="nav-link text-dark">
                 <li><img src="../../../../assets/img/conta.png" /></li>
-                <li>Finalização</li>
+                <li class="font-titulo">Finalização</li>
             </ul>
         </div>
     </div>
@@ -42,8 +42,8 @@
                 <th class="d-flex align-items-center">
                     <img class="img-thumbnail tam me-4" src={{livro.capa}} />
                 </th>
-                <td>{{livro.valorUnitario | currency : 'BRL'}}</td>
-                <td>{{livro.titulo}}</td>
+                <td class="tam-valor">{{livro.valorUnitario | currency : 'BRL'}}</td>
+                <td class="tam-nome">{{livro.titulo}}</td>
                 <td><a (click)="removerLivro(livro)"><img src="../../../../assets/img/lata-de-lixo.png" /></a>
                 </td>
             </tr>
@@ -53,68 +53,7 @@
             </th>
         </tbody>
     </table>
-    <div class="d-flex justify-content-end">
-        <button class="btn btn-success btn-lg" (click)="entrega()">Entrega</button> <!--(click)="criarPedido()"-->
+    <div class="pb-2 d-flex justify-content-end">
+        <button class="btn btn-success btn-lg" (click)="entrega()">Entrega</button> 
     </div>
-
-    <!-- AQUI VAI SER O PESQUISAR CEP E PREÇO TOTAL E BOTÃO DE FINALIZAR PEDIDO
-    <div class="d-flex justify-content-between">
-  
-            <div class="card tam-card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-          <div class="card tam-card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-    </div> -->
-
-    <!--<tbody>
-            <tr>
-                <th class="d-flex align-items-center">
-                    <img class="img-thumbnail tam me-4" src="../../../../assets/img/a-cabana.jpg" />
-                    <a routerLink="#">A CABANA (William P. Young)</a>
-                </th>
-                <td>R$ 56,50</td>
-                <td><input type="number" class="form-control" id="qtdItem" value="1"></td>
-                <td>(VU*Qtd) </td>
-                <td><a (click)="delete()"><img class="lixo" src="../../../../assets/img/lata-de-lixo.png"></a></td>
-            </tr>
-            <tr>
-                <th class="d-flex align-items-center">
-                    <img class="img-thumbnail tam me-4" src="../../../../assets/img/hp-ordemdafenix.jpg" />
-                    <a routerLink="#">HARRY POTTER E A ORDEM DA FÊNIX (J. K. Rowling)</a>
-                </th>
-                <td>R$ 56,50</td>
-                <td><input type="number" class="form-control" id="qtdItem" value="1"></td>
-                <td>(VU*Qtd) </td>
-                <td><a (click)="delete()"><img class="lixo" src="../../../../assets/img/lata-de-lixo.png"></a></td>
-            </tr>
-            <tr>
-                <th class="d-flex align-items-center">
-                    <img class="img-thumbnail tam me-4" src="../../../../assets/img/a-menina-que-roubava-livros.jpg" />
-                    <a routerLink="#">A MENINA QUE ROUBAVA LIVROS (Markus Zusak)</a>
-                </th>
-                <td>R$ 56,50</td>
-                <td><input type="number" class="form-control" id="qtdItem" value="1"></td>
-                <td>(VU*Qtd) </td>
-                <td><a (click)="delete()"><img class="lixo" src="../../../../assets/img/lata-de-lixo.png"></a></td>
-            </tr>
-            <tr>
-                <th>
-                    <button class="btn btn-outline-secondary">Escolher mais produtos</button>
-                </th>
-            </tr>
-        </tbody>-->
 </div>

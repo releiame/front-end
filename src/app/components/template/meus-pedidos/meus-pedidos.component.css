@@ -6,8 +6,12 @@
 
 @media (max-width: 420px) {
     .tam-p {
-        font-size:small;
+        font-size:xx-small;
     }
+}
 
-    
+@media (max-width: 377px) {
+    .tam-p {
+        font-size:xx-small;
+    }
 }

@@ -34,10 +34,12 @@ a {
 .comprar-qtd {
     width: 40vh;
 }
+
 .caminhao {
     width: 60px;
     height: auto;
 }
+
 .frete {
     align-items: end;
 }
@@ -52,7 +54,40 @@ p {
 
 @media (max-width: 420px) {
     img {
-        width: 170px;
+        width: 160px;
         height: auto;
+    }
+
+    p {
+        font-size: small;
+    }
+    h4 {
+        font-size: medium;
+    }
+    h2 {
+        font-size:large;
+    }
+    .btn-danger {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 377px) {
+    img {
+        width: 160px;
+        height: auto;
+    }
+
+    p {
+        font-size: small;
+    }
+    h4 {
+        font-size: medium;
+    }
+    h2 {
+        font-size:large;
+    }
+    .btn-danger {
+        font-size: smaller;
     }
 }
