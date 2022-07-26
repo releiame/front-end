@@ -1,7 +1,7 @@
 <footer *ngIf="isHeader">
     <footer>
-        <div class="page-footer font-small cor py-2">
-            <div class="d-flex flex-nowrap justify-content-around">
+        <div class="container-fluid page-footer font-small cor py-2">
+            <div class="d-flex flex-wrap justify-content-around ">
                 <div class="d-flex align-items-center">
                     <div>
                         <img class="tam-i pe-2" src="../../../../assets/img/caminhao-de-carga.png" />
@@ -28,7 +28,7 @@
                         <img class="tam-i pe-2" src="../../../../assets/img/cartao-do-banco.png" />
                     </div>
                     <div>
-                        <div class="corr none tam-h5">Até 5x nos cartões</div>
+                        <div class="corr none tam-h5">Até 12x nos cartões</div>
                         <div class="small corr none tam-p">Parcele suas compras</div>
                     </div>
                 </div>
@@ -44,127 +44,125 @@
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="container-fluid bg-black">
+            <div class="d-flex justify-content-around flex-wrap ">
+                <div class="mt-2">
+                    <ul>
+                        <li class="h5">
+                            <a class="text-light tam-h5">Informções</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#sobrenosModal" href="">Sobre
+                                nós</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicaprivacidadeModal"
+                                href="">Política de Privacidade</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicatrocaModal"
+                                href="">Política de Troca</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicaentregaModal"
+                                href="">Política de Entrega</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicapagamentoModal"
+                                href="">Política de Pagamento</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#fale-conosco" href="">Fale
+                                Conosco</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Minha Conta -->
+                <div class="text-light mt-2">
+                    <ul>
+                        <li class="h5">
+                            <a class="text-light tam-h5">Conta</a>
+                        </li>
+                        <li>
+                            <a class="tips-link text-light tam-p" routerLink="">Minha conta</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" href="#">Pedidos e Devoluções</a>
+                        </li>
+                        <li>
+                            <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#cadastroFuncModal"
+                                href="#">Cadastrar</a>
+                        </li>
+                    </ul>
 
-
-        <div class="bg-black">
-            <div class="d-flex justify-content-between  flex-nowrap">
-                
-                <ul class="text-light mt-2">
-                    <li class="h5 text-light">
-                        <h5>Informações</h5>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#sobrenosModal" href="">Sobre
-                            nós</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicaprivacidadeModal"
-                            href="">Política de Privacidade</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicatrocaModal"
-                            href="">Política de Troca</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicaentregaModal"
-                            href="">Política de Entrega</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#politicapagamentoModal"
-                            href="">Política de Pagamento</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#fale-conosco" href="">Fale
-                            Conosco</a>
-                    </li>
-                </ul>
-
-                
-                <ul class="text-light mt-2">
-                    <li class="h5 text-light">
-                        <h5>Conta</h5>
-                    </li>
-                    <li>
-                        <a class="tips-link text-light tam-p" routerLink="">Minha conta</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" href="#">Pedidos e Devoluções</a>
-                    </li>
-                    <li>
-                        <a class="text-light tam-p" data-bs-toggle="modal" data-bs-target="#cadastroFuncModal"
-                            href="#">Cadastrar</a>
-                    </li>
-                </ul>
-
-                
-                <ul class="text-light mt-2">
-                    <li class="h5 text-light">
-                        <h5>Links Rápidos</h5>
-                    </li>
-                    <li *ngFor="let item of listaTags">
-                        <a class="tam-p tips-link text-light"
-                            [routerLink]="['/busca-etiqueta', item.id_etiqueta]">{{item.nome}}</a>
-                    </li>
-                </ul>
-
-                
-                <ul class="text-light text-center mt-2">
-                    <li class="h5 text-light">
-                        <h5>Redes Sociais</h5>
-                    </li>
-                    <li>
-                        <div class="social-network-icons">
-                            <a href="" target="_blank" class=" social-network-icon">
-                                <img class="tam-icon" src="../../../../assets/img/facebook.png"
-                                    alt="Facebook do Releia-me">
-                            </a>
-
-                            <a href="" target="_blank" class="social-network-icon">
-                                <img class="tam-icon" src="../../../../assets/img/instagram.png"
-                                    alt="Instagram do Releia-me">
-                            </a>
-
-                            <a href="" target="_blank" class="social-network-icon">
-                                <img class="tam-icon" src="../../../../assets/img/twitter.png"
-                                    alt="Twitter do Releia-me">
-                            </a>
-
-                            <a href="" target="_blank" class=" social-network-icon">
-                                <img class="tam-icon" src="../../../../assets/img/linkedin.png"
-                                    alt="Linkedin do Releia-me">
-                            </a>
-
-                            <a href="https://github.com/ProjetoIntegrador-DH" target="_blank"
-                                class="social-network-icon">
-                                <img class="tam-icon" src="../../../../assets/img/github.png" alt="Github do Releia-me">
-                            </a>
-
-                            <a href="https://github.com/ProjetoIntegrador-DH" target="_blank"
-                                class="social-network-icon">
-                                <img class="tam-icon" src="../../../../assets/img/youtube.png"
-                                    alt="Youtube do Releia-me">
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="container-fluid d-flex justify-content-between  flex-nowrap align-items-center">
-
-                <div class="text-start text-light ms-3">
-                    <h5 class="mb-3 tam-h5">Gateways e formas de pagamento</h5>
-                    <img class="tam-pagmto" src="../../../../assets/img/formas.png" />
+                </div>
+                <!-- Coluna de Dicas de Livros -->
+                <div class="text-start text-light mt-2 ">
+                    <ul>
+                        <li class="h5">
+                            <a class="text-light tam-h5">Links Rápidos</a>
+                        </li>
+                        <li *ngFor="let item of listaTags">
+                            <a class="tam-p tips-link text-light"
+                                [routerLink]="['/busca-etiqueta', item.id_etiqueta]">{{item.nome}}</a>
+                        </li>
+                    </ul>
                 </div>
 
+                <!-- Redes Sociais -->
+                <div class="social-network text-light text-center mt-2">
+                    <ul>
+                        <li class="h5">
+                            <a class="text-light tam-h5">Redes Sociais</a>
+                        </li>
+                        <li>
+                            <div class="social-network-icons">
+                                <a href="" target="_blank" class=" social-network-icon">
+                                    <img class="tam-icon" src="../../../../assets/img/facebook.png" alt="Facebook do Releia-me">
+                                </a>
 
-                <div class="text-end text-light me-3">
-                    <h5 class="tam-h5">Selos e certificações</h5>
-                    <img class="tam-ssl" src="../../../../assets/img/site-seguro.png" />
+                                <a href="" target="_blank" class="social-network-icon">
+                                    <img class="tam-icon" src="../../../../assets/img/instagram.png" alt="Instagram do Releia-me">
+                                </a>
+
+                                <a href="" target="_blank" class="social-network-icon">
+                                    <img class="tam-icon" src="../../../../assets/img/twitter.png" alt="Twitter do Releia-me">
+                                </a>
+
+                                <a href="" target="_blank" class=" social-network-icon">
+                                    <img class="tam-icon" src="../../../../assets/img/linkedin.png" alt="Linkedin do Releia-me">
+                                </a>
+
+                                <a href="https://github.com/ProjetoIntegrador-DH" target="_blank"
+                                    class="social-network-icon">
+                                    <img class="tam-icon" src="../../../../assets/img/github.png" alt="Github do Releia-me">
+                                </a>
+
+                                <a href="https://github.com/ProjetoIntegrador-DH" target="_blank"
+                                    class="social-network-icon">
+                                    <img class="tam-icon" src="../../../../assets/img/youtube.png" alt="Youtube do Releia-me">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <div class="bg-black d-flex align-items-center d-flex flex-nowrap justify-content-between">
 
+            <div class="text-start text-light ms-3">
+                <h5 class="mb-3 tam-h5">Gateways e formas de pagamento</h5>
+                <img class="tam-pagmto" src="../../../../assets/img/formas.png" />
+            </div>
+
+
+            <div class="text-end text-light me-3">
+                <h5 class="tam-h5">Selos e certificações</h5>
+                <img class="tam-ssl" src="../../../../assets/img/site-seguro.png" />
+            </div>
+        </div>
 
         <!-- Barra Final do Footer -->
         <div class="footer-last-bar bg-light">
@@ -177,8 +175,8 @@
                             href="https://github.com/ProjetoIntegrador-DH/ProjetoIntegrador">Releia.me</a></small>
                 </div>
                 <div>
-                    <small>Plataforma <a href="" data-bs-toggle="modal" data-bs-target="#modalDevs"><img
-                                class="tam-grupo6" src="../../../../assets/img/grupo.png" /></a></small>
+                    <small>Plataforma <a href="" data-bs-toggle="modal" data-bs-target="#modalDevs"><img class="tam-grupo6"
+                                src="../../../../assets/img/grupo.png" /></a></small>
                 </div>
             </div>
         </div>
@@ -222,8 +220,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
-                            (click)='cadastrarFuncionario()'>Criar
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)='cadastrarFuncionario()'>Criar
                             Cadastro</button>
                     </div>
                 </form>

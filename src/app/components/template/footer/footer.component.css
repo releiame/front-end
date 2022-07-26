@@ -109,7 +109,7 @@ ul li {
     height: 90px;
   }
 
-  h5 {
+  .tam-h5 {
     font-size: medium;
   }
 
@@ -136,30 +136,25 @@ ul li {
 @media (max-width: 420px) {
   .tam-pagmto {
     width: auto;
-    height: 25px;
+    height: 30px;
   }
 
   .tam-ssl {
     width: auto;
-    height: 40px;
+    height: 50px;
   }
 
-  h5 {
-    font-size: 15px;
+  .tam-h5 {
+    font-size: medium;
   }
 
   .tam-p {
-    font-size: 12px;
+    font-size: small;
   }
 
   .tam-rele {
     width: auto;
     height: 30px;
-  }
-
-  .tam-grupo6 {
-    width: auto;
-    height: 16px;
   }
 
   .none {
@@ -175,7 +170,6 @@ ul li {
     width: auto;
     height: 40px;
   }
-  
 }
 
 @media (max-width: 400px) {
@@ -186,10 +180,10 @@ ul li {
 
   .tam-ssl {
     width: auto;
-    height: 40px;
+    height: 45px;
   }
 
-  h5 {
+  .tam-h5 {
     font-size: 15px;
   }
 
@@ -204,7 +198,7 @@ ul li {
 
   .tam-grupo6 {
     width: auto;
-    height: 16px;
+    height: 15px;
   }
 
   .none {
@@ -213,13 +207,11 @@ ul li {
 
   .tam-icon {
     width: auto;
-    height: 25px;
+    height: 25px !important;
   }
 
   .tam-i {
     width: auto;
-    height: 35px;
+    height: 40px;
   }
-  
 }
-

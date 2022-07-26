@@ -41,13 +41,17 @@
   visibility: visible;
 }
 
-.espaco {
-  margin-left: 4vh;
-  margin-bottom: 2vh;
-}
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .card {
-    width: 7rem;
+    width: 5.5rem;
+  }
+
+  small {
+    font-size: smaller;
+  }
+
+  p {
+    font-size: small;
   }
 }

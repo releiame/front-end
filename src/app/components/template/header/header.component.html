@@ -15,7 +15,7 @@
                     <div class="input-group">
                         <input id="barraDePesquisa" type="search" [(ngModel)]="tituloLivro"
                             class="form-control wid tm-busca" name="tituloLivro"
-                            placeholder="         Pesquise aqui seu livro" aria-label="true">
+                            placeholder="        Pesquise aqui seu livro" aria-label="true">
                         <button [routerLink]="['busca-livro', tituloLivro]" class="btn btn-outline-light" type="button"
                             id="button-addon2"><i class="fa fa-search" style="margin: 0 2px;"></i>
                         </button>
@@ -31,12 +31,11 @@
                     aria-haspopup="true" aria-expanded="false">
                     Olá, {{nome}}
                 </a>-->
-                <div><img class="none" src="assets/img/user32.png" /></div>
                 <div><li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light tam-p" data-bs-toggle="dropdown" href="" role="button"
+                    <a class="nav-link dropdown-toggle text-light tam-p " data-bs-toggle="dropdown" href="" role="button"
                         aria-expanded="false"
-                        *ngIf="authService.logado() == false && authService.logadoFuncionario() == false">Minha
-                        Conta</a>
+                        *ngIf="authService.logado() == false && authService.logadoFuncionario() == false"><img class="" src="assets/img/user32.png" /> <a  class="none text-light"> Minha
+                        Conta</a></a>
                     <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false" *ngIf="authService.logado() || authService.logadoFuncionario()">Olá,
                         {{nome}}</a>
@@ -61,7 +60,7 @@
 
                 </li></div>
                <div><a *ngIf="authService.logadoFuncionario() == false" routerLink="/carrinho" class="carrinho"><img class="tam-carrinho"
-                        src="assets/img/carrinho.png"></a></div> 
+                        src="assets/img/carrinho.png"/></a></div><span *ngIf="atualizacaoCarrinho() == true" class="badge bg-light text-dark">{{carrinho}}</span>
             </div>
         </ul>
     </nav>

@@ -55,6 +55,7 @@ export class CadEnderecoComponent implements OnInit {
   
   escolherEndereco(event: any){
     environment.id_endereco = event.target.value
+    console.log(environment.id_endereco)
   }
   
   adicionar(){

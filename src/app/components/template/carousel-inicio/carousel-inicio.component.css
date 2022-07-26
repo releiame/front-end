@@ -16,16 +16,10 @@
         height: 400px;
     }
 }
-@media (max-width: 420px) {
-    .ta {
-        width: auto;
-        height: 200px;
-    }
-}
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     .ta {
-        width: auto;
+        width: 100%;
         height: 200px;
     }
 }

@@ -1,20 +1,17 @@
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h3 class="text-center text-secondary">Resultados para "{{tituloProcurado}}"</h3>
-        </div>
-    </div>
+    <h3 class="mt-5 text-center text-secondary">Resultados para "{{tituloProcurado}}"</h3>
 
-    <div class="row d-flex justify-content-around">
+
+    <div class="mt-3 d-flex justify-content-evenly flex-wrap">
         <!--card-->
-        <div class="card cartao border-0 espaco p-3" *ngFor="let item of listaLivros">
+        <div class="card cartao border-0 m-3 p-3" *ngFor="let item of listaLivros">
             <a [routerLink]="['/livro', item.id_livros]">
                 <img src="{{item.capa}}" alt="{{item.descricao}}" class="card-img-top">
             </a>
             <div class="my-2">
                 <div class="d-flex justify-content-around">
-                    <a href="#" id="{{item.etiqueta.id_etiqueta}}" name="eti"
-                        class="badge bg-success filtro-badge">{{item.etiqueta.nome}}</a>
+                    <p><a href="#" id="{{item.etiqueta.id_etiqueta}}" name="eti"
+                            class="badge bg-success filtro-badge">{{item.etiqueta.nome}}</a></p>
                 </div>
             </div>
             <div class="py-3">

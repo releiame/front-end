@@ -1,8 +1,20 @@
 .card {
-    width: 13rem;
+  width: 13rem;
+}
+
+a {
+text-decoration: none;
+}
+@media (max-width: 430px) {
+  .card {
+    width: 5.5rem;
   }
-  @media (max-width: 420px) {
-    .card {
-      width: 7rem;
-    }
+
+  small {
+    font-size: smaller;
   }
+
+  p {
+    font-size: small;
+  }
+}

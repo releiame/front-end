@@ -10,12 +10,14 @@ import { environment } from 'src/environments/environment.prod';
 import Swal from 'sweetalert2';
 
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
 
   @Input() isHeader: boolean
   cliente: Cliente = new Cliente
@@ -29,6 +31,11 @@ export class HeaderComponent implements OnInit {
   nomeFuncionario: string
   id_funcionario: number
   codf: string
+  carrinho: number = 0
+
+
+
+
 
   constructor(
     private router: Router,
@@ -42,13 +49,13 @@ export class HeaderComponent implements OnInit {
     this.getAllEtiquetas()
   }
 
-  getAllEtiquetas(){
-    this.etiquetaService.getAllEtiquetas().subscribe((resp: Etiqueta[]) =>{
+  getAllEtiquetas() {
+    this.etiquetaService.getAllEtiquetas().subscribe((resp: Etiqueta[]) => {
       this.listaTags = resp
     })
   }
 
-  tipoUsuario(event: any){
+  tipoUsuario(event: any) {
     this.funcionario = true
   }
 
@@ -57,7 +64,6 @@ export class HeaderComponent implements OnInit {
     environment.token = ''
     environment.id_cliente = 0
     environment.codf = ''
-    environment.id_endereco = 0
     this.funcionario == false
     window.location.reload()
   }
@@ -89,9 +95,9 @@ export class HeaderComponent implements OnInit {
     this.nomeFuncionario = environment.nome
   }
 
-  logar(){
-    if(this.funcionario == true){
-      this.authService.entrarfunc(this.funcionarioLogin).subscribe((resp:FuncionarioLogin) =>{
+  logar() {
+    if (this.funcionario == true) {
+      this.authService.entrarfunc(this.funcionarioLogin).subscribe((resp: FuncionarioLogin) => {
         this.funcionarioLogin = resp
 
         environment.codf = this.funcionarioLogin.codf
@@ -99,22 +105,21 @@ export class HeaderComponent implements OnInit {
         environment.token = this.funcionarioLogin.token
         environment.id_funcionario = this.funcionarioLogin.id_funcionario
         environment.senha = this.funcionarioLogin.senha
-        
+
         this.router.navigate(['/home'])
-      },erro => {
-        if(erro.status == 500)
-        {
+      }, erro => {
+        if (erro.status == 500) {
           Swal.fire('CODF ou senha incorretos!')
-        }else if(erro.status == 401){
+        } else if (erro.status == 401) {
           Swal.fire('CODF ou senha incorretos!')
-        }else if(erro.status == 200){
+        } else if (erro.status == 200) {
           Swal.fire('OK')
         }
-      }      
+      }
       )
 
-    }else if(this.funcionario == false){
-      this.authService.entrar(this.clienteLogin).subscribe((resp:ClienteLogin) =>{
+    } else if (this.funcionario == false) {
+      this.authService.entrar(this.clienteLogin).subscribe((resp: ClienteLogin) => {
         this.clienteLogin = resp
 
         environment.token = this.clienteLogin.token
@@ -122,18 +127,25 @@ export class HeaderComponent implements OnInit {
         environment.id_cliente = this.clienteLogin.id_cliente
         environment.email = this.clienteLogin.email
         environment.senha = this.clienteLogin.senha
-        
+
         this.router.navigate(['/home'])
       }, erro => {
-        if(erro.status==500)
-        {
+        if (erro.status == 500) {
           Swal.fire('E-mail ou senha incorretos!')
-        }else if(erro.status == 401){
+        } else if (erro.status == 401) {
           Swal.fire('E-mail ou senha incorretos!')
         }
       }
       )
     }
   }
-
+  atualizacaoCarrinho() {
+    this.carrinho = environment.carrinho.length - 1
+    if(this.carrinho > 0) {
+      return true
+    } else {
+      return false
+    }
+  
+  }
 }

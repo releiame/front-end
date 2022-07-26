@@ -1,28 +1,24 @@
 <div class="container">
-  <div class="row mt-5">
-    <div class="col-md-12">
-      <h3 class="text-center text-secondary">
-        Resultados para tag "{{ etiqueta.nome }}"
-      </h3>
-    </div>
-  </div>
-
-  <div class="row d-flex justify-content-around">
+  <h3 class="mt-5 text-center text-secondary">
+    Resultados para tag "{{ etiqueta.nome }}"
+  </h3>
+ 
+  <div class="d-flex justify-content-evenly flex-wrap">
     <!--card-->
     <ng-container *ngFor="let i of listaLivros">
-      <div class="card border-0 espaco p-3" *ngIf="i.etiqueta.id_etiqueta == etiqueta.id_etiqueta">
-        <div class="card cartao border-0 espaco p-3">
+      <div class="card border-0 m-3" *ngIf="i.etiqueta.id_etiqueta == etiqueta.id_etiqueta">
+        <div class="card cartao border-0 p-3">
           <a [routerLink]="['/livro', i.id_livros]">
             <img src="{{ i.capa }}" alt="{{ i.descricao }}" class="card-img-top" />
           </a>
-          <div class="my-2">
-            <div class="d-flex justify-content-around">
-              <a href="#" name="eti" class="badge bg-success filtro-badge">{{
+          <div>
+            <div class=" my-2 d-flex justify-content-around">
+              <p><a href="#" name="eti" class="badge bg-success filtro-badge">{{
                 i.etiqueta.nome
-                }}</a>
+                }}</a></p>
             </div>
           </div>
-          <div class="py-3">
+          <div class="pb-3">
             <div class="small d-flex justify-content-center">
               <small>{{ i.titulo }}</small>
             </div>
@@ -38,7 +34,5 @@
         </div>
       </div>
     </ng-container>
-    <!--fim card-->
-    <!--card-->
   </div>
 </div>
