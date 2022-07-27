@@ -4,6 +4,7 @@ import { Cliente } from 'src/app/model/Cliente';
 import { Endereco } from 'src/app/model/Endereco';
 import { Livros } from 'src/app/model/Livros';
 import { Pedido } from 'src/app/model/Pedido';
+import { Viacep } from 'src/app/model/Viacep';
 import { AuthService } from 'src/app/service/auth.service';
 import { EnderecoService } from 'src/app/service/endereco.service';
 import { LivrosService } from 'src/app/service/livros.service';
@@ -18,6 +19,7 @@ import Swal from 'sweetalert2';
 })
 export class CadEnderecoComponent implements OnInit {
 
+  viacep: Viacep = new Viacep()
   endereco: Endereco = new Endereco()
   
   idCliente: number
@@ -66,6 +68,7 @@ export class CadEnderecoComponent implements OnInit {
       this.endereco = resp
       Swal.fire('Endereço cadastrado!')
       this.getAllEndereco()
+      this.endereco = new Endereco()
     })
   }
 
@@ -86,6 +89,23 @@ export class CadEnderecoComponent implements OnInit {
       this.router.navigate(['/home'])
     }else{
       this.router.navigate(['/pagamento'])
+    }
+  }
+
+  encontrarEndereco(cep: string){
+    this.enderecoService.encontrar(cep).subscribe((resp: Viacep) =>{
+      this.viacep = resp
+    })
+    if(cep != ""){
+      var validacep = /^[0-9]{8}$/;
+
+      if(validacep.test(cep)){
+        this.endereco.bairro = this.viacep.bairro
+        this.endereco.cidade = this.viacep.localidade
+        this.endereco.rua = this.viacep.logradouro
+      }else{
+        Swal.fire('CEP incorreto!')
+      }
     }
   }
 }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Endereco } from '../model/Endereco';
+import { Viacep } from '../model/Viacep';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,10 @@ export class EnderecoService {
 
   delete(id_endereco: number){
     return this.http.delete(`https://releiame.herokuapp.com/endereco/${id_endereco}`, this.token)
+  }
+
+  encontrar(cep: String):Observable<Viacep>{
+    return this.http.get<Viacep>(`http://viacep.com.br/ws/${cep}/json/`)
   }
 
 }

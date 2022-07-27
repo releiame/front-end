@@ -9,6 +9,17 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-6">
       <div class="form-group">
+        <label for="titulo">CEP</label>
+        <input
+          [(ngModel)]="endereco.cep"
+          type="text"
+          class="form-control"
+          id="cep"
+          placeholder="Digite o cep"
+          (blur)="encontrarEndereco(this.endereco.cep)"
+        />
+      </div>
+      <div class="form-group">
         <label for="titulo">Cidade</label>
         <input
           [(ngModel)]="endereco.cidade"
@@ -26,16 +37,6 @@
           class="form-control"
           id="bairro"
           placeholder="Digite o bairro"
-        />
-      </div>
-      <div class="form-group">
-        <label for="titulo">CEP</label>
-        <input
-          [(ngModel)]="endereco.cep"
-          type="text"
-          class="form-control"
-          id="cep"
-          placeholder="Digite o cep"
         />
       </div>
       <div class="form-group">

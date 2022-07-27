@@ -60,7 +60,7 @@
                 <div class="form-group col-6">
                     <label for="titulo">CEP</label>
                     <input [(ngModel)]="endereco.cep" type="text" class="form-control" id="cep"
-                        placeholder="Digite o cep" />
+                        placeholder="Digite o cep" (blur)="encontrarEndereco(this.endereco.cep)" />
                 </div>
 
                 <div>

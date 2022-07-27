@@ -25,11 +25,7 @@ export class LivroComponent implements OnInit {
   ngOnInit(){
     let id_livros = this.route.snapshot.params['id_livros']
     this.findByIdLivro(id_livros)
-    
-    console.log("ID DO LIVRO NA BUSCA: " + id_livros)
-    console.log("Metodo: " + this.findByIdLivro(id_livros))
-    console.log("TAMANHO DO CARRINHO ATUALMENTE: " + this.carrinho)
-    console.log("TAMANHO DO ENVIRONMENT CARRINHO: " + environment.carrinho)
+    window.scroll(0,0)
   }
 
   findByIdLivro(id_livros: number){
@@ -41,7 +37,5 @@ export class LivroComponent implements OnInit {
   adicionarCarrinho(id_livros: number){
     this.carrinho.push(id_livros)
     Swal.fire('Produto adicionado ao carrinho!')
-    console.log("TAMANHO DO CARRINHO DEPOIS DE ADICIONAR UM LIVRO NELE: " + this.carrinho.length)
-    console.log("TAMANHO DO ENVIRONMENT CARRINHO DEPOIS DE ADICIONAR UM CARRINHO NELE: " + environment.carrinho.length)
   }
 }
