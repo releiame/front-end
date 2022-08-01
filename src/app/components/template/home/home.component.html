@@ -5,8 +5,9 @@
         <!--Cards-->
         <div class=" py-3 d-flex justify-content-evenly flex-wrap">
             <!--card-->
-            <div class="card cartao border-0 m-3 p-3" *ngFor="let item of listaLivros"
-                ng-repeat="let item of listaLivros | orderBy:propertyName:reverse">
+            <ng-container *ngFor="let item of listaLivros"
+            ng-repeat="let item of listaLivros | orderBy:propertyName:reverse">
+            <div class="card cartao border-0 m-3 p-3" *ngIf="item.qtdeEstoque>0">
                 <a [routerLink]="['/livro', item.id_livros]">
                     <img class="card-img-top" src="{{item.capa}}" alt="{{item.descricao}}">
                 </a>
@@ -27,7 +28,7 @@
                     </div>
                 </div>
             </div>
-
+            </ng-container>
         </div>
 
     </div>

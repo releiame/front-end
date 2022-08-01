@@ -29,12 +29,12 @@
                         </h4>
                     </div>
                     <div class="d-flex justify-content-start">
-                        <a *ngIf="authService.logadoFuncionario() == false" (click)="adicionarCarrinho(livro.id_livros)"
+                        <a *ngIf="authService.logadoFuncionario() == false && livro.qtdeEstoque>0"  (click)="adicionarCarrinho(livro.id_livros)"
                             class="btn btn-danger text-light comprar-qtd">Comprar</a>
                     </div>
                     <div class="d-flex justify-content-start">
                         <h1 class="text-align-center text-danger"
-                            *ngIf="authService.logadoFuncionario() && livro.qtdeEstoque<=0">LIVRO SEM ESTOQUE</h1>
+                            *ngIf="authService.logadoFuncionario() && livro.qtdeEstoque<=0 || livro.qtdeEstoque<1">LIVRO SEM ESTOQUE</h1>
                     </div>
 
                 </div>
