@@ -50,7 +50,7 @@ export class CadEnderecoComponent implements OnInit {
   }
 
   findClienteById(id_cliente: number){
-    this.authService.getClienteById(id_cliente).subscribe((resp: Cliente) => {
+    this.authService.getClienteById(environment.id_cliente).subscribe((resp: Cliente) => {
       this.cliente = resp
     })
   }
@@ -61,7 +61,6 @@ export class CadEnderecoComponent implements OnInit {
   }
   
   adicionar(){
-    this.cliente.id_cliente = this.idCliente
     this.endereco.cliente = this.cliente
 
     this.enderecoService.adicionar(this.endereco).subscribe((resp: Endereco) =>{

@@ -36,7 +36,7 @@ export class EnderecoComponent implements OnInit {
   }
 
   findClienteById(id_cliente: number){
-    this.authService.getClienteById(id_cliente).subscribe((resp: Cliente) => {
+    this.authService.getClienteById(environment.id_cliente).subscribe((resp: Cliente) => {
       this.cliente = resp
     })
   }
@@ -73,6 +73,7 @@ export class EnderecoComponent implements OnInit {
       Swal.fire('Endereço cadastrado!')
       this.getAllEndereco()
       this.endereco = new Endereco();
+      this.router.navigate(['/home'])
     })
   }
 

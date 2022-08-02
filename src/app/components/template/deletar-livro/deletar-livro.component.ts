@@ -44,7 +44,7 @@ export class DeletarLivroComponent implements OnInit {
   apagar(){
     this.livrosService.deleteLivros(this.idLivro).subscribe(() =>{
       Swal.fire('Livro apagado!')
-      this.router.navigate(['/cadastrar-livro'])
+      this.router.navigate(['/funcionario'])
     })
   }
 

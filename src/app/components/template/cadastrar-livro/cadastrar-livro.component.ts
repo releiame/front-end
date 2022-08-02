@@ -87,10 +87,14 @@ export class CadastrarLivroComponent implements OnInit {
 
     this.livrosService.cadastrar(this.livro).subscribe((resp: Livros) =>{
       this.livro = resp
+
       this.router.navigate(['/funcionario'])
-      Swal.fire('Livro cadastrado com sucesso')
-      this.livro = new Livros()
-      this.getAllLivros()
+        Swal.fire('SUCESSO!',
+        'Livro cadastrado com sucesso!',
+        'success')
+        this.livro = new Livros()
+        this.getAllLivros()
+      
     })
   }
 }
