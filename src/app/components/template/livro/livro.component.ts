@@ -17,7 +17,7 @@ import Swal from 'sweetalert2';
 export class LivroComponent implements OnInit {
 
   carrinho = environment.carrinho
-  livro: Livros
+  livro: Livros = new Livros()
 
   avaliacao: Avaliacao = new Avaliacao()
   listaAvaliacao: Avaliacao[]

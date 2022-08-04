@@ -59,12 +59,14 @@
     </div>
     <h2>Comentários</h2>
     <div class="card my-3" *ngFor="let item of listaAvaliacao ">
-        <div class="card-body">
-            <h5 class="card-title pb-3 mb-3 border-bottom">{{item.cliente.nome}}</h5> 
-            <h6 class="card-subtitle mb-2 text-muted"></h6>
-            <p class="card-text">{{item.comentario}}</p>
-            <button *ngIf="item.cliente.id_cliente == this.cliente.id_cliente" (click)="deletar(item.id)" type="button" class="btn btn-danger">Deletar</button>
-        </div>
+        <ng-container *ngIf="item.livros.id_livros == this.livro.id_livros">
+            <div class="card-body">
+                <h5 class="card-title pb-3 mb-3 border-bottom">{{item.cliente.nome}}</h5> 
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">{{item.comentario}}</p>
+                <button *ngIf="item.cliente.id_cliente == this.cliente.id_cliente" (click)="deletar(item.id)" type="button" class="btn btn-danger">Deletar</button>
+            </div>
+        </ng-container>
     </div>
 </div>
 
