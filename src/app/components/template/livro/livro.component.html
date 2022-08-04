@@ -4,7 +4,7 @@
     <i class="fa fa-angle-right mx-2"></i>
     <small>{{livro.titulo}}</small>
     <div class="row ms-4">
-        <div class="col-md-6 my-3 border d-flex justify-content-center"><img src="{{livro.capa}}" />
+        <div class="col-md-6 my-3 border p-3 d-flex justify-content-center"><img src="{{livro.capa}}" />
         </div>
 
         
@@ -12,12 +12,13 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10">
                     <h4>{{livro.titulo}}</h4>
+                    
+                    <p><strong>Autor(a):</strong> {{livro.autor}}</p>
                     <p><strong>ISBN:</strong> {{livro.isbn}}</p>
+                    <p><strong>Qtde. Estoque: </strong>{{livro.qtdeEstoque}}</p>
                     <p *ngIf="authService.logadoFuncionario()"><strong>Id:</strong> {{livro.id_livros}}</p>
                     <p *ngIf="authService.logadoFuncionario()"><strong>Quem cadastrou:
                         </strong>{{livro.funcionario.nome}}</p>
-                    <p><strong>Qtde. Estoque: </strong>{{livro.qtdeEstoque}}</p>
-
                     
                     <a [routerLink]="['/busca-etiqueta', livro.etiqueta.id_etiqueta]"
                         class="badge bg-success text-white filtro-badge mx-1">{{livro.etiqueta.nome}}</a>
@@ -36,7 +37,6 @@
                         <h1 class="text-align-center text-danger"
                             *ngIf="authService.logadoFuncionario() && livro.qtdeEstoque<=0 || livro.qtdeEstoque<1">LIVRO SEM ESTOQUE</h1>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -44,13 +44,27 @@
 </div>
 
 
-<div class="container pt-3">
+<div class="container my-5 border-bottom">
     <h2>Descrição</h2>
     <p>{{livro.descricao}}</p>
-    <h4 class="py-4">Mais Informações </h4>
-    <p>Autor(a): {{livro.autor}}</p>
-    <p>Qtde. Estoque: {{livro.qtdeEstoque}}</p>
-    <p>ISBN: {{livro.isbn}}</p>
-    <p>Tags: <a [routerLink]="['/busca-etiqueta', livro.etiqueta.id_etiqueta]"
-            class="badge bg-success text-white filtro-badge mx-1">{{livro.etiqueta.nome}}</a></p>
 </div>
+
+<div class="container pb-3">
+    <div class="form-group" *ngIf="authService.logado()">
+        <label for="comentario">Já leu o livro? Deixe seu comentário!</label>
+        <textarea [(ngModel)]='avaliacao.comentario' class="form-control" id="comentario" rows="3"></textarea>
+        <div class="py-3 d-flex flex-row-reverse">
+            <button type="button" class="btn btn-outline-success" (click)="comentario()">Enviar</button>
+        </div>
+    </div>
+    <h2>Comentários</h2>
+    <div class="card my-3" *ngFor="let item of listaAvaliacao ">
+        <div class="card-body">
+            <h5 class="card-title pb-3 mb-3 border-bottom">{{item.cliente.nome}}</h5> 
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p class="card-text">{{item.comentario}}</p>
+            <button *ngIf="item.cliente.id_cliente == this.cliente.id_cliente" (click)="deletar(item.id)" type="button" class="btn btn-danger">Deletar</button>
+        </div>
+    </div>
+</div>
+

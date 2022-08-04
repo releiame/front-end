@@ -1,6 +1,7 @@
 import { Funcionario } from "./Funcionario"
 import { Pedido } from "./Pedido"
 import { Etiqueta } from "./Etiqueta"
+import { Avaliacao } from "./Avaliacao"
 
 export class Livros{
     public id_livros: number
@@ -15,4 +16,5 @@ export class Livros{
     public pedido: Pedido[]
     public etiqueta: Etiqueta
     public funcionario: Funcionario
+    public avaliacao: Avaliacao
     }
